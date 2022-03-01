@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaft.com">
+    <head>
+        <title>plantilla</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:fragment="header">
+            <!-- le mandamos el mje atravez del template y se muestra el mje que esta en  messages.properties-->
+            <h1 th:text="#{plantilla.titutlo}">Titulo</h1>
+        </header>
+
+        <footer th:fragment="footer">
+            <div>
+                <br/>
+                <a th:href="@{/(lang=es)}">ES</a>|
+                <a th:href="@{/(lang=en)}">EN</a>|
+                <!-- le mandamos el mje atravez del template y se muestra el mje que esta en  messages.properties-->
+                <span> [[#{plantilla.pie-paguina}]]<a href="https://www.linkedin.com/feed/" target="_blank">Linkeding.com</a></span>
+            </div>
+
+        </footer>
+
+    </body>
+</html>
